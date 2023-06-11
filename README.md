@@ -23,8 +23,8 @@ Thus, we focus on two crucial aspects:
 2. text-conditioned molecule generation 
 
 To this end, we focus on a specific task, `molecule-caption translation`, the two sub-tasks of which exactly corresponds to the two aspects. 
-1. `molecule2caption (i.e., Mol2Cap)`, aims to generate a caption for a given molecule to describe its structure, properties, and functions.
-2. `caption2molecule (i.e., Cap2Mol)`, aims to generate a molecule for a given caption, which could help researchers customize their molecules for specific purposes.
+1. `molecule2caption (i.e., Mol2Cap)` aims to generate a caption for a given molecule to describe its structure, properties, and functions.
+2. `caption2molecule (i.e., Cap2Mol)` aims to generate a molecule for a given caption, which could help researchers customize their molecules for specific purposes.
 
 
 ### Model Strcuture
