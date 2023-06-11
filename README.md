@@ -2,7 +2,7 @@
 
 The official repo of `MolReGPT` - Empowering Molecule Discovery for Molecule-Caption Translation with Large Language Models: A ChatGPT Perspective. (To appear in Arxiv) 
 
-#### Author_List
+#### Author List
 | Name | Affiliation |
 | :---: | :---: |
 | Jiatong Li | The Hong Kong Polytechnic University |
