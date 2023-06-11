@@ -39,7 +39,7 @@ We apply the same dataset used in MolT5, which is the dataset of [ChEBI-20](./da
 Results will be released once the paper is public to the community (scheduled 2023/06/13:00:00:00 GMT). Thanks for you attention!
 
 #### Mol2Cap
-| Method | BLEU-$\uparrow$ | BLEU-4 $\uparrow$| ROUGEL-1 $\uparrow$| ROUGEL-2 $\uparrow$ | ROUGEL-L $\uparrow$ | METEOR $\uparrow$ | Text2Mol $\uparrow$ |
+| Method | BLEU-2 $\uparrow$ | BLEU-4 $\uparrow$| ROUGEL-1 $\uparrow$| ROUGEL-2 $\uparrow$ | ROUGEL-L $\uparrow$ | METEOR $\uparrow$ | Text2Mol $\uparrow$ |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Transformer | 0.061 | 0.027 | 0.204 | 0.087 | 0.186 | 0.114 | 0.057 |
 | T5-base | 0.511 | 0.423 | 0.607 | 0.451 | 0.550 | 0.539 | 0.523 |
