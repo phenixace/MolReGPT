@@ -1,7 +1,26 @@
-# MolReGPT
+# MolReGPT - Empowering Molecule Discovery for Molecule-Caption Translation with Large Language Models: A ChatGPT Perspective
 
 The official repo of `MolReGPT` - Empowering Molecule Discovery for Molecule-Caption Translation with Large Language Models: A ChatGPT Perspective. (To appear in Arxiv) 
 
+#### Author_List
+| Name | Affiliation |
+| :---: | :---: |
+| Jiatong Li | The Hong Kong Polytechnic University |
+| Yunqing Liu | The Hong Kong Polytechnic University |
+| Wenqi Fan | The Hong Kong Polytechnic University |
+| Xiao-Yong Wei | The Hong Kong Polytechnic University & Sichuan University |
+| Hui Liu | Michigan State University |
+| Jiliang Tang | Michigan State University |
+| Qing Li | The Hong Kong Polytechnic University |
+
+#### Model Strcuture
+[![model](./figs/model_structure.png)](./figs/model_structure.png)
+
+#### Contact
+If you encounter any problems, please feel free to contact us via [email](jiatong.li@connect.polyu.hk)
+
+
+## News
 Codes, data, and demo will be available soon~ We will follow our roadmap to release the results. Please stay tuned!
 
 #### In the first phase:
@@ -13,9 +32,6 @@ The remaining results will be gradually released. Thanks for your patience!
 
 Secret Now! 🤫 We will release our plan~ 😄
 
-#### Contact
-If you encounter any problems, please feel free to contact us via [email](jiatong.li@connect.polyu.hk)
-
 ## Introduction
 MolReGPT aims to create a foundation method for molecule discovery by leveraging large language models (LLMs). 
 Thus, we focus on two crucial aspects: 
@@ -26,10 +42,6 @@ To this end, we focus on a specific task, `molecule-caption translation`, the tw
 1. `molecule2caption (i.e., Mol2Cap)` aims to generate a caption for a given molecule to describe its structure, properties, and functions.
 2. `caption2molecule (i.e., Cap2Mol)` aims to generate a molecule for a given caption, which could help researchers customize their molecules for specific purposes.
 
-
-### Model Strcuture
-
-TBA
 
 ### Dataset
 We apply the same dataset used in MolT5, which is the dataset of [ChEBI-20](./dataset/cap_mol_trans/raw/)
@@ -80,16 +92,6 @@ Currently, you can customize your own prompt via our released [jupyter-notebook 
 
 We will also provide web-page for a more user-friendly demo.
 
-## Author_List
-| Name | Affiliation |
-| :---: | :---: |
-| Jiatong Li | The Hong Kong Polytechnic University |
-| Yunqing Liu | The Hong Kong Polytechnic University |
-| Wenqi Fan | The Hong Kong Polytechnic University |
-| Xiao-Yong Wei | The Hong Kong Polytechnic University & Sichuan University |
-| Hui Liu | Michigan State University |
-| Jiliang Tang | Michigan State University |
-| Qing Li | The Hong Kong Polytechnic University |
 ## Citation
 ```
 @inproceedings{molregpt,
