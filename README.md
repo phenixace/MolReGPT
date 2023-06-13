@@ -70,7 +70,7 @@ Results have been released!👏
 
 
 #### Cap2Mol
-| Method | BLEU $\uparrow$ | EM $\uparrow$ | Levenshtein $\downarrow$ | MACCS FTS $\uparrow$ | RDK FTS $\uparrow$ | Morgan FTS $\uparrow$  | FCD $\downarrow$ | Text2Mol $\uparrow$ | VAlidity $\uparrow$ |
+| Method | BLEU $\uparrow$ | EM $\uparrow$ | Levenshtein $\downarrow$ | MACCS FTS $\uparrow$ | RDK FTS $\uparrow$ | Morgan FTS $\uparrow$  | FCD $\downarrow$ | Text2Mol $\uparrow$ | Validity $\uparrow$ |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Transformer | 0.499 | 0.000 | 57.66 | 0.480 | 0.320 | 0.217 | 11.32 | 0.277 | **0.906** |
 | T5-base | 0.762 | 0.069 | 24.950 | *0.731* | *0.605* | *0.545* | 2.48 | *0.499* | 0.660 |
