@@ -8,10 +8,10 @@ The official repo of `MolReGPT` - **"Empowering Molecule Discovery for Molecule-
 | [Jiatong Li](https://phenixace.github.io/) | The Hong Kong Polytechnic University | jiatong.li@connect.polyu.hk |
 | [Yunqing Liu](https://liuyunqing.github.io/) | The Hong Kong Polytechnic University | yunqing617.liu@connect.polyu.hk |
 | [Wenqi Fan](https://wenqifan03.github.io/) | The Hong Kong Polytechnic University | wenqifan03@gmail.com |
-| Xiao-Yong Wei | The Hong Kong Polytechnic University & Sichuan University | x1wei@polyu.edu.hk |
+| [Xiao-Yong Wei](https://www4.comp.polyu.edu.hk/~x1wei/) | The Hong Kong Polytechnic University & Sichuan University | x1wei@polyu.edu.hk |
 | Hui Liu | Michigan State University | liuhui7@msu.edu |
-| Jiliang Tang | Michigan State University | tangjili@msu.edu |
-| Qing Li | The Hong Kong Polytechnic University | qing-prof.li@polyu.edu.hk |
+| [Jiliang Tang](https://cse.msu.edu/~tangjili/) | Michigan State University | tangjili@msu.edu |
+| [Qing Li](https://www4.comp.polyu.edu.hk/~csqli/) | The Hong Kong Polytechnic University | qing-prof.li@polyu.edu.hk |
 
 ### Contact
 If you encounter any problems, please feel free to contact us.
