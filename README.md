@@ -103,10 +103,10 @@ We will also provide web-page for a more user-friendly demo.
 
 ## Citation
 ```
-@inproceedings{molregpt,
+@article{molregpt,
   title={Empowering Molecule Discovery for Molecule-Caption Translation with Large Language Models: A ChatGPT Perspective},
   author={Jiatong Li and Yunqing Liu and Wenqi Fan and Xiao-Yong Wei and Hui Liu and Jiliang Tang and Qing Li},
-  booktitle={arXiv:2306.06615},
+  journal={arXiv preprint arXiv:2306.06615},
   year={2023}
 }
 ```
