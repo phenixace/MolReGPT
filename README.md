@@ -1,6 +1,6 @@
 # MolReGPT: Empowering Molecule Discovery for Molecule-Caption Translation with Large Language Models: A ChatGPT Perspective
 
-The official repo of `MolReGPT` - **"Empowering Molecule Discovery for Molecule-Caption Translation with Large Language Models: A ChatGPT Perspective"**. ([Arxiv Link](https://arxiv.org/abs/2306.06615)) 
+The official repo of `MolReGPT` - **"Empowering Molecule Discovery for Molecule-Caption Translation with Large Language Models: A ChatGPT Perspective"**. ([Available through Arxiv Link](https://arxiv.org/abs/2306.06615)) 
 
 ### Author List
 | Name | Affiliation |
