@@ -23,7 +23,7 @@ Codes, data, and demo will be available soon~ We will follow our roadmap to rele
 ### In the first phase:
 Our paper is available through Arxiv~ 🎉
 
-We first released the results of [zero_shot](./dataset/cap_mol_trans/zero_shot/). 
+We first released the results of [zero_shot](./dataset/cap_mol_trans/zero_shot/) and ten shot results [ten_shot_bm25](./dataset/cap_mol_trans/ten_shot_bm25/), [ten_shot_morgan](./dataset/cap_mol_trans/ten_shot_morgan/).
 
 The remaining results will be gradually released. Thanks for your patience!
 
