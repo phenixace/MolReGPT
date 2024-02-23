@@ -38,11 +38,13 @@ parser.add_argument('--use_gt', action=argparse.BooleanOptionalAction)
 
 parser.add_argument('--data_path', type=str, default='text2mol_data/', help='path where data is located')
 
+parser.add_argument('--raw_file', type=str, default='../dataset/cap_mol_trans/raw/', help='raw_file')
+
 parser.add_argument('--text_model', type=str, default='allenai/scibert_scivocab_uncased', help='Desired language model tokenizer.')
 
 parser.add_argument('--checkpoint', type=str, default='t2m_output/test_outputfinal_weights.320.pt', help='path where test generations are saved')
 
-parser.add_argument('--input_file', type=str, default='caption2smiles_example.txt', help='path where test generations are saved')
+parser.add_argument('--input_file', type=str, default='../dataset/cap_mol_trans/ten_shot_bm25/test.txt', help='path where test generations are saved')
 
 parser.add_argument('--text_trunc_length', type=str, default=256, help='tokenizer maximum length')
 
@@ -86,25 +88,35 @@ for cid in cids_to_smiles:
 descriptions = {}
 
 mol2vec = {}
-
-#load data
 with open(osp.join(args.data_path, 'test'+'.txt')) as f:
     reader = csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE, fieldnames = ['cid', 'mol2vec', 'desc'])
     for n, line in enumerate(reader):
-        descriptions[line['cid']] = line['desc']
-        mol2vec[line['cid']] = np.fromstring(line['mol2vec'], sep = " ")
+        mol2vec[line['cid']] = np.fromstring(line['mol2vec'], sep=" ")
 
-outputs = []
-
+#load data
+output_descs = []
+output_gts = []
+with open(osp.join(args.raw_file, 'test'+'.txt')) as f:
+    reader = csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE)
+    for n, line in enumerate(reader):
+        descriptions[line['CID']] = line['description']
+        output_descs.append(line['description'])
+        gt_smi = line['SMILES']
+        m = Chem.MolFromSmiles(gt_smi)
+        gt_smi = Chem.MolToSmiles(m)
+        if gt_smi == "[C]":
+            gt_smi = "C"
+        output_gts.append(gt_smi)
+# print(mol2vec)
+output_ots = []
 with open(osp.join(args.input_file)) as f:
     reader = csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE)
     for n, line in enumerate(reader):
-        gt_smi = line['ground truth']
-        ot_smi = line['output']
-        m = Chem.MolFromSmiles(gt_smi)
-        gt_smi = Chem.MolToSmiles(m)
-        descriptions[smiles_to_cids[gt_smi]] = line['description']
-        outputs.append((line['description'], gt_smi, ot_smi))
+        
+        ot_smi = line['caption2molecule']
+        output_ots.append(ot_smi)
+        
+outputs = list(zip(output_descs, output_gts, output_ots))
 
 m2v_outputs = []
 
@@ -167,8 +179,9 @@ with torch.no_grad():
         text_embs.append(text_emb)
         mol_embs.append(mol_emb)
 
-        sims.append(cosine_similarity(text_emb, mol_emb)[0][0])
+        sims.append(abs(cosine_similarity(text_emb, mol_emb)[0][0]))
 
+print(sims)
 
 print('Average Similarity:', np.mean(sims))
 

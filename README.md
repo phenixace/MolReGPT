@@ -18,7 +18,8 @@ If you encounter any problems, please feel free to contact us.
 
 
 ## News
-Codes, data, and demo will be available soon~ We will follow our roadmap to release the results. Please stay tuned!
+* We release the results of MolReGPT (GPT-4-0314) for Mol2Cap and Cap2Mol tasks and update the evaluations folder for convenient testing.
+* Codes, data, and demo will be available soon~ We will follow our roadmap to release the results. Please stay tuned!
 
 ### In the first phase:
 Our paper is available through Arxiv~ 🎉
@@ -63,20 +64,26 @@ Results have been released!👏
 | Method | BLEU-2 $\uparrow$ | BLEU-4 $\uparrow$| ROUGEL-1 $\uparrow$| ROUGEL-2 $\uparrow$ | ROUGEL-L $\uparrow$ | METEOR $\uparrow$ | Text2Mol $\uparrow$ |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Transformer | 0.061 | 0.027 | 0.204 | 0.087 | 0.186 | 0.114 | 0.057 |
-| T5-base | 0.511 | 0.423 | 0.607 | *0.451* | *0.550* | 0.539 | 0.523 |
-| MolT5-base | *0.540* | *0.457* | **0.634** | **0.485** | **0.578** | *0.569* | *0.547* |
 | GPT-3.5-turbo (zero_shot) | 0.103 | 0.050 | 0.261 | 0.088 | 0.204 | 0.161 | 0.352 |
-| MolReGPT | **0.565** | **0.482** | *0.623* | 0.450 | 0.543 | **0.585** | **0.560** |
+| T5-base | 0.511 | 0.423 | 0.607 | 0.451 | 0.550 | 0.539 | 0.523 |
+| MolT5-base | 0.540 | 0.457 | *0.634* | *0.485* | *0.578* | 0.569 | 0.547 |
+| MolReGPT (GPT-3.5-turbo) | 0.565 | 0.482 | 0.623 | 0.450 | 0.543 | 0.585 | 0.560 |
+| T5-large | 0.558 | 0.467 | 0.630 | 0.478 | 0.569 | 0.586 | 0.563 |
+| MolT5-large | *0.594* | *0.508* | **0.654** | **0.510** | **0.594** | **0.614** | *0.582* |
+| MolReGPT (GPT-4-0314) | **0.607** | **0.525** | *0.634* | 0.476 | 0.562 | *0.610* | **0.585** |
 
 
 #### Cap2Mol
 | Method | BLEU $\uparrow$ | EM $\uparrow$ | Levenshtein $\downarrow$ | MACCS FTS $\uparrow$ | RDK FTS $\uparrow$ | Morgan FTS $\uparrow$  | FCD $\downarrow$ | Text2Mol $\uparrow$ | Validity $\uparrow$ |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Transformer | 0.499 | 0.000 | 57.66 | 0.480 | 0.320 | 0.217 | 11.32 | 0.277 | **0.906** |
-| T5-base | 0.762 | 0.069 | 24.950 | *0.731* | *0.605* | *0.545* | 2.48 | *0.499* | 0.660 |
-| MolT5-base | *0.769* | *0.081* | **24.458** | 0.721 | 0.588 | 0.529 | *2.18* | 0.496 | 0.772|
 | GPT-3.5-turbo (zero_shot) | 0.489 | 0.019 | 52.13 | 0.705 | 0.462 | 0.367 | 2.05 | 0.479 | 0.802 |
-| MolReGPT | **0.790** | **0.139** | *24.91* | **0.847** | **0.708** | **0.624** | **0.57** | **0.571** | *0.887* |
+| T5-base | 0.762 | 0.069 | 24.950 | 0.731 | 0.605 | 0.545 | 2.48 | 0.499 | 0.660 |
+| MolT5-base | 0.769 | 0.081 | 24.458 | 0.721 | 0.588 | 0.529 | 2.18 | 0.496 | 0.772|
+| MolReGPT (GPT-3.5-turbo) | 0.790 | 0.139 | 24.91 | *0.847* | 0.708 | 0.624 | *0.57* | *0.571* | 0.887 |
+| T5-large | *0.854* | 0.279 | *16.721* | 0.823 | 0.731 | 0.670 | 1.22 | 0.552 | 0.902|
+| MolT5-large | *0.854* | **0.311** | **16.071** | 0.834 | *0.746* | *0.684* | 1.20 | 0.554 | *0.905*|
+| MolReGPT (GPT-4-0314) | **0.857** | *0.280* | 17.14 |**0.903** | **0.805** | **0.739** | **0.41** | **0.593** | 0.899 |
 
 
 ## Requirements

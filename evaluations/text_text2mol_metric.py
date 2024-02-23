@@ -36,7 +36,9 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--use_gt', action=argparse.BooleanOptionalAction)
 
-parser.add_argument('--input_file', type=str, default='smiles2caption_example.txt', help='path where test generations are saved')
+parser.add_argument('--input_file', type=str, default='../dataset/cap_mol_trans/ten_shot_morgan/test.txt', help='path where test generations are saved')
+
+parser.add_argument('--raw_file', type=str, default='../dataset/cap_mol_trans/raw/', help='raw_file')
 
 parser.add_argument('--data_path', type=str, default='text2mol_data/', help='path where data is located.')
 
@@ -86,22 +88,34 @@ for cid in cids_to_smiles:
     smiles_to_cids[cids_to_smiles[cid]] = cid
 
 mol2vec = {}
-
-#load data
 with open(osp.join(args.data_path, args.split+'.txt')) as f:
     reader = csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE, fieldnames = ['cid', 'mol2vec', 'desc'])
     for n, line in enumerate(reader):
-        mol2vec[line['cid']] = np.fromstring(line['mol2vec'], sep = " ")
+        mol2vec[line['cid']] = np.fromstring(line['mol2vec'], sep=" ")
 
-outputs = []
-
+#load data
+output_smi = []
+output_gts = []
+with open(osp.join(args.raw_file, args.split+'.txt')) as f:
+    reader = csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE)
+    for n, line in enumerate(reader):
+        # print(line['SMILES'])
+        
+        output_gts.append(line['description'])
+        m = Chem.MolFromSmiles(line['SMILES'])
+        smi = Chem.MolToSmiles(m)
+        if smi == "[C]":
+            smi = "C"
+        output_smi.append(smi)
+# print(mol2vec)
+output_ots = []
 with open(osp.join(args.input_file)) as f:
     reader = csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE)
     for n, line in enumerate(reader):
-        out_tmp = line['output'][6:] if line['output'].startswith('[CLS] ') else line['output']
-        m = Chem.MolFromSmiles(line['SMILES'])
-        smi = Chem.MolToSmiles(m)
-        outputs.append((smi, line['ground truth'], out_tmp))
+        out_tmp = line['molecule2caption']
+        output_ots.append(out_tmp)
+
+outputs =list(zip(output_smi, output_gts, output_ots))
 
 
 
@@ -148,7 +162,7 @@ with torch.no_grad():
         text_embs.append(text_emb)
         mol_embs.append(mol_emb)
 
-        sims.append(cosine_similarity(text_emb, mol_emb)[0][0])
+        sims.append(abs(cosine_similarity(text_emb, mol_emb)[0][0]))
         
 
 print('Average Similarity:', np.mean(sims))
