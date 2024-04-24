@@ -18,6 +18,8 @@ If you encounter any problems, please feel free to contact us.
 
 
 ## News
+* Our paper has been accepted by IEEE TKDE and will appear soon~ 🎉
+* We release our second work **In-Context Molecule Adaptation (ICMA)**, which aims to further improve the performance of MolReGPT by adapting the parameters of LLMs via in-context molecule tuning [Paper Link](https://arxiv.org/abs/2403.04197).
 * We release the results of MolReGPT (GPT-4-0314) for Mol2Cap and Cap2Mol tasks and update the evaluations folder for convenient testing.
 * Codes, data, and demo will be available soon~ We will follow our roadmap to release the results. Please stay tuned!
 
