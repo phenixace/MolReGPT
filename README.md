@@ -1,6 +1,6 @@
 # MolReGPT: Empowering Molecule Discovery for Molecule-Caption Translation with Large Language Models: A ChatGPT Perspective
 
-The official repo of `MolReGPT` - **"Empowering Molecule Discovery for Molecule-Caption Translation with Large Language Models: A ChatGPT Perspective"**. ([Available through Arxiv Link](https://arxiv.org/abs/2306.06615)) 
+The official repo of `MolReGPT` - **"Empowering Molecule Discovery for Molecule-Caption Translation with Large Language Models: A ChatGPT Perspective"**. ([Accepted by IEEE TKDE (To appear)](https://arxiv.org/abs/2306.06615)) 
 
 ### Author List
 | Name | Affiliation | Email |
@@ -22,15 +22,14 @@ If you encounter any problems, please feel free to contact us.
 * Codes, data, and demo will be available soon~ We will follow our roadmap to release the results. Please stay tuned!
 
 ### In the first phase:
-Our paper is available through Arxiv~ 🎉
+Our paper is accpeted by IEEE TKDE and we have updated the accepted version~ 🎉
+
+We will soon release all the codes, data, and demo for MolReGPT. Please stay tuned! Thanks for your patience!
 
 We first released the results of [zero_shot](./dataset/cap_mol_trans/zero_shot/) and ten shot results [ten_shot_bm25](./dataset/cap_mol_trans/ten_shot_bm25/), [ten_shot_morgan](./dataset/cap_mol_trans/ten_shot_morgan/).
 
-The remaining results will be gradually released. Thanks for your patience!
-
 ### In the second phase and later:
-
-Secret Now! 🤫 We will release our plan~ 😄
+We would like to announce our second work, **In-Context Molecule Adaptation (ICMA)**, which aims to further improve the performance of MolReGPT by adapting the parameters of LLMs via in-context molecule tuning [Paper Link](https://arxiv.org/abs/2403.04197).
 
 ## Introduction
 MolReGPT aims to create a foundation method for molecule discovery by leveraging large language models (LLMs). 
