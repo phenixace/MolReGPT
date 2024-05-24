@@ -18,6 +18,7 @@ If you encounter any problems, please feel free to contact us.
 
 
 ## News
+* The official weights of ICMA are released via the hugging face repo, please refer to [ICMA model weights](https://huggingface.co/phenixace)
 * We release the remaining query code in another GitHub repo. Please refer to [MolReGPT TKDE](https://github.com/phenixace/MolReGPT4TKDE)
 * Our paper has been accepted by IEEE TKDE and will appear soon~ 🎉
 * We release our second work **In-Context Molecule Adaptation (ICMA)**, which aims to further improve the performance of MolReGPT by adapting the parameters of LLMs via in-context molecule tuning [Paper Link](https://arxiv.org/abs/2403.04197).
